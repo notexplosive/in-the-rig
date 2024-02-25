@@ -1,0 +1,53 @@
+{
+    "title": "Made at The MADE in SokoMaker",
+    "author": "NotExplosive",
+    "soko_version": "0.0.1",
+    "mod_version": "0.0.1",
+    "default_tile": "floor",
+    "tile_size": 64,
+    "title_screen_level": "title",
+    "menu_selected_color": "",
+    "campaign": {
+        "chapters": [],
+        "name": "",
+        "save_name": ""
+    },
+    "trait_enums": [],
+    "dialogue": "",
+    "color_aliases": [],
+    "swap_color": "FFFFFF",
+    "room_size_rule": {
+        "type": "width",
+        "size": 12,
+        "aspect_ratio": "1:1"
+    },
+    "prop_layer_rules": {
+        "default_layer": 0,
+        "rules": []
+    },
+    "layers": [
+        {
+            "name": "Bottom",
+            "shader": null
+        },
+        {
+            "name": "Middle",
+            "shader": null
+        },
+        {
+            "name": "Color",
+            "shader": "ColorSwap"
+        },
+        {
+            "name": "Top",
+            "shader": null
+        }
+    ],
+    "color_keys": [
+        "color"
+    ],
+    "screen_size": {
+        "width": 800,
+        "height": 600
+    }
+}
