@@ -1,1 +1,1 @@
-dotnet run --project ..\sokomaker\SokoMaker -- --modDirectory=. --watchmemory
+dotnet run --project ..\sokomaker\SokoMaker -- --modDirectory=. --watchmemory --editor

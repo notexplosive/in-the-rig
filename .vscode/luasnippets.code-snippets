@@ -1,0 +1,993 @@
+{
+	"Soko.cleanNoise": {
+	  "prefix": "Soko:cleanNoise",
+	  "body": "Soko:cleanNoise()",
+	  "description": ""
+	},
+	"Soko.color": {
+	  "prefix": "Soko:color",
+	  "body": "Soko:color(r, g, b, a)",
+	  "description": ""
+	},
+	"Soko.dirtyNoise": {
+	  "prefix": "Soko:dirtyNoise",
+	  "body": "Soko:dirtyNoise()",
+	  "description": ""
+	},
+	"Soko.frameSize": {
+	  "prefix": "Soko:frameSize",
+	  "body": "Soko:frameSize(sheetName, frame)",
+	  "description": ""
+	},
+	"Soko.getHalfTileSize": {
+	  "prefix": "Soko:getHalfTileSize",
+	  "body": "Soko:getHalfTileSize()",
+	  "description": ""
+	},
+	"Soko.gridPosition": {
+	  "prefix": "Soko:gridPosition",
+	  "body": "Soko:gridPosition(x, y)",
+	  "description": ""
+	},
+	"Soko.gridRoomSize": {
+	  "prefix": "Soko:gridRoomSize",
+	  "body": "Soko:gridRoomSize()",
+	  "description": "The size of an automatically generated \"grid room\""
+	},
+	"Soko.list": {
+	  "prefix": "Soko:list",
+	  "body": "Soko:list()",
+	  "description": ""
+	},
+	"Soko.noise": {
+	  "prefix": "Soko:noise",
+	  "body": "Soko:noise(seed)",
+	  "description": ""
+	},
+	"Soko.parseColor": {
+	  "prefix": "Soko:parseColor",
+	  "body": "Soko:parseColor(rgbaString)",
+	  "description": ""
+	},
+	"Soko.parseGridPosition": {
+	  "prefix": "Soko:parseGridPosition",
+	  "body": "Soko:parseGridPosition(gridPositionString)",
+	  "description": ""
+	},
+	"Soko.rectangle": {
+	  "prefix": "Soko:rectangle",
+	  "body": "Soko:rectangle(x, y, width, height)",
+	  "description": ""
+	},
+	"Soko.rectangleFromPoint": {
+	  "prefix": "Soko:rectangleFromPoint",
+	  "body": "Soko:rectangleFromPoint(worldPosition, width, height)",
+	  "description": ""
+	},
+	"Soko.stringToList": {
+	  "prefix": "Soko:stringToList",
+	  "body": "Soko:stringToList(str)",
+	  "description": "Converts a string of the format \"[x, y, z]\" to a LuaList of the format {x, y, z}"
+	},
+	"Soko.toGridPosition": {
+	  "prefix": "Soko:toGridPosition",
+	  "body": "Soko:toGridPosition(worldPosition)",
+	  "description": ""
+	},
+	"Soko.toWorldPosition": {
+	  "prefix": "Soko:toWorldPosition",
+	  "body": "Soko:toWorldPosition(gridPosition)",
+	  "description": ""
+	},
+	"Soko.topLayerIndex": {
+	  "prefix": "Soko:topLayerIndex",
+	  "body": "Soko:topLayerIndex()",
+	  "description": ""
+	},
+	"Soko.tweenable": {
+	  "prefix": "Soko:tweenable",
+	  "body": "Soko:tweenable(getter, setter, lerp)",
+	  "description": "Creates a tweenable object."
+	},
+	"Soko.worldPosition": {
+	  "prefix": "Soko:worldPosition",
+	  "body": "Soko:worldPosition(x, y)",
+	  "description": ""
+	},
+	"Soko.DIRECTION": {
+	  "prefix": "Soko.DIRECTION",
+	  "body": "Soko.DIRECTION",
+	  "description": ""
+	},
+	"Soko.Input": {
+	  "prefix": "Soko.Input",
+	  "body": "Soko.Input",
+	  "description": ""
+	},
+	"AnimatedObject.destroy": {
+	  "prefix": "animatedObject:destroy",
+	  "body": "animatedObject:destroy()",
+	  "description": ""
+	},
+	"AnimatedObject.setVisible": {
+	  "prefix": "animatedObject:setVisible",
+	  "body": "animatedObject:setVisible(visible)",
+	  "description": ""
+	},
+	"AnimatedObject.state": {
+	  "prefix": "animatedObject.state",
+	  "body": "animatedObject.state",
+	  "description": ""
+	},
+	"AnimatedObject.tweenableAngle": {
+	  "prefix": "animatedObject.tweenableAngle",
+	  "body": "animatedObject.tweenableAngle",
+	  "description": ""
+	},
+	"AnimatedObject.tweenableOpacity": {
+	  "prefix": "animatedObject.tweenableOpacity",
+	  "body": "animatedObject.tweenableOpacity",
+	  "description": ""
+	},
+	"AnimatedObject.tweenablePosition": {
+	  "prefix": "animatedObject.tweenablePosition",
+	  "body": "animatedObject.tweenablePosition",
+	  "description": ""
+	},
+	"AnimatedObject.tweenableScale": {
+	  "prefix": "animatedObject.tweenableScale",
+	  "body": "animatedObject.tweenableScale",
+	  "description": ""
+	},
+	"Camera.clearOffset": {
+	  "prefix": "World.camera:clearOffset",
+	  "body": "World.camera:clearOffset(duration)",
+	  "description": ""
+	},
+	"Camera.hideVignette": {
+	  "prefix": "World.camera:hideVignette",
+	  "body": "World.camera:hideVignette()",
+	  "description": ""
+	},
+	"Camera.hideVignetteInstant": {
+	  "prefix": "World.camera:hideVignetteInstant",
+	  "body": "World.camera:hideVignetteInstant()",
+	  "description": ""
+	},
+	"Camera.isAnimating": {
+	  "prefix": "World.camera:isAnimating",
+	  "body": "World.camera:isAnimating()",
+	  "description": ""
+	},
+	"Camera.panToRectangle": {
+	  "prefix": "World.camera:panToRectangle",
+	  "body": "World.camera:panToRectangle(rectangle)",
+	  "description": ""
+	},
+	"Camera.panToRoom": {
+	  "prefix": "World.camera:panToRoom",
+	  "body": "World.camera:panToRoom(room)",
+	  "description": ""
+	},
+	"Camera.setOffset": {
+	  "prefix": "World.camera:setOffset",
+	  "body": "World.camera:setOffset(worldPosition, duration)",
+	  "description": ""
+	},
+	"Camera.showVignette": {
+	  "prefix": "World.camera:showVignette",
+	  "body": "World.camera:showVignette()",
+	  "description": ""
+	},
+	"Camera.snapToRoom": {
+	  "prefix": "World.camera:snapToRoom",
+	  "body": "World.camera:snapToRoom(room)",
+	  "description": ""
+	},
+	"Camera.tweenableViewBounds": {
+	  "prefix": "World.camera:tweenableViewBounds",
+	  "body": "World.camera:tweenableViewBounds()",
+	  "description": ""
+	},
+	"Color.clone": {
+	  "prefix": "color:clone",
+	  "body": "color:clone()",
+	  "description": ""
+	},
+	"Color.hex": {
+	  "prefix": "color:hex",
+	  "body": "color:hex()",
+	  "description": ""
+	},
+	"Color.withAlpha": {
+	  "prefix": "color:withAlpha",
+	  "body": "color:withAlpha(alpha)",
+	  "description": ""
+	},
+	"Color.alpha": {
+	  "prefix": "color.alpha",
+	  "body": "color.alpha",
+	  "description": ""
+	},
+	"Color.blue": {
+	  "prefix": "color.blue",
+	  "body": "color.blue",
+	  "description": ""
+	},
+	"Color.green": {
+	  "prefix": "color.green",
+	  "body": "color.green",
+	  "description": ""
+	},
+	"Color.red": {
+	  "prefix": "color.red",
+	  "body": "color.red",
+	  "description": ""
+	},
+	"Direction.next": {
+	  "prefix": "direction:next",
+	  "body": "direction:next()",
+	  "description": ""
+	},
+	"Direction.previous": {
+	  "prefix": "direction:previous",
+	  "body": "direction:previous()",
+	  "description": ""
+	},
+	"Direction.toGridPosition": {
+	  "prefix": "direction:toGridPosition",
+	  "body": "direction:toGridPosition()",
+	  "description": ""
+	},
+	"Direction.toWorldPosition": {
+	  "prefix": "direction:toWorldPosition",
+	  "body": "direction:toWorldPosition()",
+	  "description": ""
+	},
+	"Direction.name": {
+	  "prefix": "direction.name",
+	  "body": "direction.name",
+	  "description": ""
+	},
+	"DrawArguments.isEditor": {
+	  "prefix": "drawArguments:isEditor",
+	  "body": "drawArguments:isEditor()",
+	  "description": "True if the renderer is running inside SokoMaker Editor"
+	},
+	"DrawArguments.screenRectangle": {
+	  "prefix": "drawArguments:screenRectangle",
+	  "body": "drawArguments:screenRectangle()",
+	  "description": "Rectangle representing the whole screen"
+	},
+	"DrawArguments.worldRectangle": {
+	  "prefix": "drawArguments:worldRectangle",
+	  "body": "drawArguments:worldRectangle()",
+	  "description": "Drawable Rectangle of the object being drawn"
+	},
+	"DrawArguments.gridPosition": {
+	  "prefix": "drawArguments.gridPosition",
+	  "body": "drawArguments.gridPosition",
+	  "description": "Grid Position of the object being drawn"
+	},
+	"DrawArguments.state": {
+	  "prefix": "drawArguments.state",
+	  "body": "drawArguments.state",
+	  "description": "State of the object being drawn"
+	},
+	"DrawArguments.worldPosition": {
+	  "prefix": "drawArguments.worldPosition",
+	  "body": "drawArguments.worldPosition",
+	  "description": "World position of the object being drawn"
+	},
+	"Entity.asEntity": {
+	  "prefix": "entity:asEntity",
+	  "body": "entity:asEntity()",
+	  "description": ""
+	},
+	"Entity.asTile": {
+	  "prefix": "entity:asTile",
+	  "body": "entity:asTile()",
+	  "description": ""
+	},
+	"Entity.centerWorldPosition": {
+	  "prefix": "entity:centerWorldPosition",
+	  "body": "entity:centerWorldPosition()",
+	  "description": ""
+	},
+	"Entity.checkTrait": {
+	  "prefix": "entity:checkTrait",
+	  "body": "entity:checkTrait(traitName, valueName)",
+	  "description": ""
+	},
+	"Entity.destroy": {
+	  "prefix": "entity:destroy",
+	  "body": "entity:destroy()",
+	  "description": ""
+	},
+	"Entity.displacementTweenable": {
+	  "prefix": "entity:displacementTweenable",
+	  "body": "entity:displacementTweenable()",
+	  "description": ""
+	},
+	"Entity.generateDirectionalMove": {
+	  "prefix": "entity:generateDirectionalMove",
+	  "body": "entity:generateDirectionalMove(luaDirection)",
+	  "description": "Generates (but does not execute) a Move object."
+	},
+	"Entity.generateMove": {
+	  "prefix": "entity:generateMove",
+	  "body": "entity:generateMove(position)",
+	  "description": "Generates (but does not execute) a Move object."
+	},
+	"Entity.getTrait": {
+	  "prefix": "entity:getTrait",
+	  "body": "entity:getTrait(traitName)",
+	  "description": ""
+	},
+	"Entity.isDestroyed": {
+	  "prefix": "entity:isDestroyed",
+	  "body": "entity:isDestroyed()",
+	  "description": ""
+	},
+	"Entity.isEntity": {
+	  "prefix": "entity:isEntity",
+	  "body": "entity:isEntity()",
+	  "description": ""
+	},
+	"Entity.isTile": {
+	  "prefix": "entity:isTile",
+	  "body": "entity:isTile()",
+	  "description": ""
+	},
+	"Entity.raise": {
+	  "prefix": "entity:raise",
+	  "body": "entity:raise(eventName, argsTable)",
+	  "description": ""
+	},
+	"Entity.setTraitName": {
+	  "prefix": "entity:setTraitName",
+	  "body": "entity:setTraitName(traitName, desiredValueName)",
+	  "description": ""
+	},
+	"Entity.setVisible": {
+	  "prefix": "entity:setVisible",
+	  "body": "entity:setVisible(visible)",
+	  "description": ""
+	},
+	"Entity.templateName": {
+	  "prefix": "entity:templateName",
+	  "body": "entity:templateName()",
+	  "description": ""
+	},
+	"Entity.warpTo": {
+	  "prefix": "entity:warpTo",
+	  "body": "entity:warpTo(gridPosition)",
+	  "description": ""
+	},
+	"Entity.facingDirection": {
+	  "prefix": "entity.facingDirection",
+	  "body": "entity.facingDirection",
+	  "description": ""
+	},
+	"Entity.gridPosition": {
+	  "prefix": "entity.gridPosition",
+	  "body": "entity.gridPosition",
+	  "description": ""
+	},
+	"Entity.state": {
+	  "prefix": "entity.state",
+	  "body": "entity.state",
+	  "description": "Blob of arbitrary data. Certain special keys affect rendering."
+	},
+	"Gridling.asEntity": {
+	  "prefix": "gridling:asEntity",
+	  "body": "gridling:asEntity()",
+	  "description": ""
+	},
+	"Gridling.asTile": {
+	  "prefix": "gridling:asTile",
+	  "body": "gridling:asTile()",
+	  "description": ""
+	},
+	"Gridling.centerWorldPosition": {
+	  "prefix": "gridling:centerWorldPosition",
+	  "body": "gridling:centerWorldPosition()",
+	  "description": ""
+	},
+	"Gridling.checkTrait": {
+	  "prefix": "gridling:checkTrait",
+	  "body": "gridling:checkTrait(traitName, valueName)",
+	  "description": ""
+	},
+	"Gridling.getTrait": {
+	  "prefix": "gridling:getTrait",
+	  "body": "gridling:getTrait(traitName)",
+	  "description": ""
+	},
+	"Gridling.isEntity": {
+	  "prefix": "gridling:isEntity",
+	  "body": "gridling:isEntity()",
+	  "description": ""
+	},
+	"Gridling.isTile": {
+	  "prefix": "gridling:isTile",
+	  "body": "gridling:isTile()",
+	  "description": ""
+	},
+	"Gridling.raise": {
+	  "prefix": "gridling:raise",
+	  "body": "gridling:raise(eventName, argsTable)",
+	  "description": ""
+	},
+	"Gridling.templateName": {
+	  "prefix": "gridling:templateName",
+	  "body": "gridling:templateName()",
+	  "description": ""
+	},
+	"Gridling.gridPosition": {
+	  "prefix": "gridling.gridPosition",
+	  "body": "gridling.gridPosition",
+	  "description": ""
+	},
+	"Gridling.state": {
+	  "prefix": "gridling.state",
+	  "body": "gridling.state",
+	  "description": "Blob of arbitrary data. Certain special keys affect rendering."
+	},
+	"GridPosition.absolute": {
+	  "prefix": "gridPosition:absolute",
+	  "body": "gridPosition:absolute()",
+	  "description": ""
+	},
+	"GridPosition.addDirection": {
+	  "prefix": "gridPosition:addDirection",
+	  "body": "gridPosition:addDirection(direction)",
+	  "description": ""
+	},
+	"GridPosition.clone": {
+	  "prefix": "gridPosition:clone",
+	  "body": "gridPosition:clone()",
+	  "description": ""
+	},
+	"GridPosition.maxXY": {
+	  "prefix": "gridPosition:maxXY",
+	  "body": "gridPosition:maxXY()",
+	  "description": ""
+	},
+	"GridPosition.subtractDirection": {
+	  "prefix": "gridPosition:subtractDirection",
+	  "body": "gridPosition:subtractDirection(direction)",
+	  "description": ""
+	},
+	"GridPosition.x": {
+	  "prefix": "gridPosition.x",
+	  "body": "gridPosition.x",
+	  "description": ""
+	},
+	"GridPosition.y": {
+	  "prefix": "gridPosition.y",
+	  "body": "gridPosition.y",
+	  "description": ""
+	},
+	"Input.direction": {
+	  "prefix": "input.direction",
+	  "body": "input.direction",
+	  "description": ""
+	},
+	"Input.isPrimary": {
+	  "prefix": "input.isPrimary",
+	  "body": "input.isPrimary",
+	  "description": ""
+	},
+	"Input.isSecondary": {
+	  "prefix": "input.isSecondary",
+	  "body": "input.isSecondary",
+	  "description": ""
+	},
+	"List.add": {
+	  "prefix": "list:add",
+	  "body": "list:add(obj)",
+	  "description": ""
+	},
+	"List.size": {
+	  "prefix": "list:size",
+	  "body": "list:size()",
+	  "description": "Returns the value of the highest index"
+	},
+	"List.sort": {
+	  "prefix": "list:sort",
+	  "body": "list:sort(comparison)",
+	  "description": "Sorts the contents of the list using a provided comparison function.\r\n                The comparison function must take 2 parameters: 2 elements of the list (a, b).\r\n                The comparison function must then return an integral number, negative means \"a is smaller than b,\" positive means\r\n                \"a is bigger than b\" and 0 means they're equivalent. If the comparison function returns a decimal number, it will be truncated."
+	},
+	"Move.cancel": {
+	  "prefix": "move:cancel",
+	  "body": "move:cancel()",
+	  "description": ""
+	},
+	"Move.execute": {
+	  "prefix": "move:execute",
+	  "body": "move:execute()",
+	  "description": ""
+	},
+	"Move.isAllowed": {
+	  "prefix": "move:isAllowed",
+	  "body": "move:isAllowed()",
+	  "description": ""
+	},
+	"Move.movingEntity": {
+	  "prefix": "move:movingEntity",
+	  "body": "move:movingEntity()",
+	  "description": ""
+	},
+	"Move.startPosition": {
+	  "prefix": "move:startPosition",
+	  "body": "move:startPosition()",
+	  "description": ""
+	},
+	"Move.stop": {
+	  "prefix": "move:stop",
+	  "body": "move:stop()",
+	  "description": ""
+	},
+	"Move.targetPosition": {
+	  "prefix": "move:targetPosition",
+	  "body": "move:targetPosition()",
+	  "description": ""
+	},
+	"Move.wasCancelled": {
+	  "prefix": "move:wasCancelled",
+	  "body": "move:wasCancelled()",
+	  "description": ""
+	},
+	"Move.direction": {
+	  "prefix": "move.direction",
+	  "body": "move.direction",
+	  "description": ""
+	},
+	"Painter.drawCircle": {
+	  "prefix": "painter:drawCircle",
+	  "body": "painter:drawCircle(center, radius, thickness, segments)",
+	  "description": ""
+	},
+	"Painter.drawFillRectangle": {
+	  "prefix": "painter:drawFillRectangle",
+	  "body": "painter:drawFillRectangle(rectangle)",
+	  "description": ""
+	},
+	"Painter.drawFirstFrame": {
+	  "prefix": "painter:drawFirstFrame",
+	  "body": "painter:drawFirstFrame(sheetName, position, angle)",
+	  "description": ""
+	},
+	"Painter.drawFrame": {
+	  "prefix": "painter:drawFrame",
+	  "body": "painter:drawFrame(sheetName, frame, position, angle, scale)",
+	  "description": ""
+	},
+	"Painter.drawLine": {
+	  "prefix": "painter:drawLine",
+	  "body": "painter:drawLine(start, end, thickness)",
+	  "description": ""
+	},
+	"Painter.drawProp": {
+	  "prefix": "painter:drawProp",
+	  "body": "painter:drawProp(sheetName, position, angle)",
+	  "description": ""
+	},
+	"Painter.setColor": {
+	  "prefix": "painter:setColor",
+	  "body": "painter:setColor(rgbaHexColor)",
+	  "description": ""
+	},
+	"ReadableState.get": {
+	  "prefix": "readonlyState:get",
+	  "body": "readonlyState:get(key)",
+	  "description": "Gets the key within the table. Returns nil if it's not found.\r\n                You can also use the [] syntax similar to a table."
+	},
+	"ReadableState.has": {
+	  "prefix": "readonlyState:has",
+	  "body": "readonlyState:has(key)",
+	  "description": "Returns true if the key exists in the table"
+	},
+	"Rectangle.bottomLeft": {
+	  "prefix": "rectangle:bottomLeft",
+	  "body": "rectangle:bottomLeft()",
+	  "description": ""
+	},
+	"Rectangle.bottomRight": {
+	  "prefix": "rectangle:bottomRight",
+	  "body": "rectangle:bottomRight()",
+	  "description": ""
+	},
+	"Rectangle.center": {
+	  "prefix": "rectangle:center",
+	  "body": "rectangle:center()",
+	  "description": ""
+	},
+	"Rectangle.constrain": {
+	  "prefix": "rectangle:constrain",
+	  "body": "rectangle:constrain(constrainingRectangle)",
+	  "description": ""
+	},
+	"Rectangle.envelopes": {
+	  "prefix": "rectangle:envelopes",
+	  "body": "rectangle:envelopes(rectToEnvelope)",
+	  "description": ""
+	},
+	"Rectangle.inflated": {
+	  "prefix": "rectangle:inflated",
+	  "body": "rectangle:inflated(size)",
+	  "description": ""
+	},
+	"Rectangle.size": {
+	  "prefix": "rectangle:size",
+	  "body": "rectangle:size()",
+	  "description": ""
+	},
+	"Rectangle.topLeft": {
+	  "prefix": "rectangle:topLeft",
+	  "body": "rectangle:topLeft()",
+	  "description": ""
+	},
+	"Rectangle.topRight": {
+	  "prefix": "rectangle:topRight",
+	  "body": "rectangle:topRight()",
+	  "description": ""
+	},
+	"Rectangle.zoomedIn": {
+	  "prefix": "rectangle:zoomedIn",
+	  "body": "rectangle:zoomedIn(zoomAmount, focalPoint)",
+	  "description": ""
+	},
+	"Rectangle.zoomedOut": {
+	  "prefix": "rectangle:zoomedOut",
+	  "body": "rectangle:zoomedOut(zoomAmount, focalPoint)",
+	  "description": ""
+	},
+	"Rectangle.height": {
+	  "prefix": "rectangle.height",
+	  "body": "rectangle.height",
+	  "description": ""
+	},
+	"Rectangle.width": {
+	  "prefix": "rectangle.width",
+	  "body": "rectangle.width",
+	  "description": ""
+	},
+	"Rectangle.x": {
+	  "prefix": "rectangle.x",
+	  "body": "rectangle.x",
+	  "description": ""
+	},
+	"Rectangle.y": {
+	  "prefix": "rectangle.y",
+	  "body": "rectangle.y",
+	  "description": ""
+	},
+	"Room.bottomRight": {
+	  "prefix": "room:bottomRight",
+	  "body": "room:bottomRight()",
+	  "description": ""
+	},
+	"Room.topLeft": {
+	  "prefix": "room:topLeft",
+	  "body": "room:topLeft()",
+	  "description": ""
+	},
+	"Room.usableSpacePixels": {
+	  "prefix": "room:usableSpacePixels",
+	  "body": "room:usableSpacePixels()",
+	  "description": ""
+	},
+	"Room.viewBounds": {
+	  "prefix": "room:viewBounds",
+	  "body": "room:viewBounds()",
+	  "description": ""
+	},
+	"Size.height": {
+	  "prefix": "size.height",
+	  "body": "size.height",
+	  "description": ""
+	},
+	"Size.width": {
+	  "prefix": "size.width",
+	  "body": "size.width",
+	  "description": ""
+	},
+	"SoundDescriptor.stop": {
+	  "prefix": "sound:stop",
+	  "body": "sound:stop()",
+	  "description": ""
+	},
+	"SoundDescriptor.tweenableVolume": {
+	  "prefix": "sound.tweenableVolume",
+	  "body": "sound.tweenableVolume",
+	  "description": ""
+	},
+	"Tween.callback": {
+	  "prefix": "tween:callback",
+	  "body": "tween:callback(luaFunction)",
+	  "description": ""
+	},
+	"Tween.dynamic": {
+	  "prefix": "tween:dynamic",
+	  "body": "tween:dynamic(luaFunction)",
+	  "description": ""
+	},
+	"Tween.endMultiplex": {
+	  "prefix": "tween:endMultiplex",
+	  "body": "tween:endMultiplex()",
+	  "description": ""
+	},
+	"Tween.endSequence": {
+	  "prefix": "tween:endSequence",
+	  "body": "tween:endSequence()",
+	  "description": ""
+	},
+	"Tween.interpolate": {
+	  "prefix": "tween:interpolate",
+	  "body": "tween:interpolate(luaTweenSpecification, duration, easeFunctionName)",
+	  "description": ""
+	},
+	"Tween.startLoopSequence": {
+	  "prefix": "tween:startLoopSequence",
+	  "body": "tween:startLoopSequence()",
+	  "description": ""
+	},
+	"Tween.startMultiplex": {
+	  "prefix": "tween:startMultiplex",
+	  "body": "tween:startMultiplex()",
+	  "description": ""
+	},
+	"Tween.startSequence": {
+	  "prefix": "tween:startSequence",
+	  "body": "tween:startSequence()",
+	  "description": ""
+	},
+	"Tween.wait": {
+	  "prefix": "tween:wait",
+	  "body": "tween:wait(seconds)",
+	  "description": ""
+	},
+	"Tween.waitUntil": {
+	  "prefix": "tween:waitUntil",
+	  "body": "tween:waitUntil(waitUntilCallback)",
+	  "description": ""
+	},
+	"World.allEntities": {
+	  "prefix": "World:allEntities",
+	  "body": "World:allEntities()",
+	  "description": "Returns a list of all entities in the current room, cached at the moment this function was called."
+	},
+	"World.allEntitiesInRoom": {
+	  "prefix": "World:allEntitiesInRoom",
+	  "body": "World:allEntitiesInRoom()",
+	  "description": "Returns a list of all entities in the current room, cached at the moment this function was called."
+	},
+	"World.checkDialogueExists": {
+	  "prefix": "World:checkDialogueExists",
+	  "body": "World:checkDialogueExists(sceneName)",
+	  "description": "Returns true if the dialogue scene exists."
+	},
+	"World.colorKeys": {
+	  "prefix": "World:colorKeys",
+	  "body": "World:colorKeys()",
+	  "description": ""
+	},
+	"World.finishChapter": {
+	  "prefix": "World:finishChapter",
+	  "body": "World:finishChapter()",
+	  "description": ""
+	},
+	"World.getEntitiesAt": {
+	  "prefix": "World:getEntitiesAt",
+	  "body": "World:getEntitiesAt(gridPosition)",
+	  "description": ""
+	},
+	"World.getGridlingsAt": {
+	  "prefix": "World:getGridlingsAt",
+	  "body": "World:getGridlingsAt(gridPosition)",
+	  "description": ""
+	},
+	"World.getRoomAtGridPosition": {
+	  "prefix": "World:getRoomAtGridPosition",
+	  "body": "World:getRoomAtGridPosition(gridPosition)",
+	  "description": ""
+	},
+	"World.getTileAt": {
+	  "prefix": "World:getTileAt",
+	  "body": "World:getTileAt(gridPosition)",
+	  "description": ""
+	},
+	"World.isInRoom": {
+	  "prefix": "World:isInRoom",
+	  "body": "World:isInRoom(luaGridPosition)",
+	  "description": ""
+	},
+	"World.isShowingDialogue": {
+	  "prefix": "World:isShowingDialogue",
+	  "body": "World:isShowingDialogue()",
+	  "description": "Returns true if the Dialogue Box is open."
+	},
+	"World.isWithinCurrentRoom": {
+	  "prefix": "World:isWithinCurrentRoom",
+	  "body": "World:isWithinCurrentRoom(gridPosition)",
+	  "description": "Returns true if the GridPosition is within the current room."
+	},
+	"World.loadLevel": {
+	  "prefix": "World:loadLevel",
+	  "body": "World:loadLevel(levelName, overrideTable)",
+	  "description": ""
+	},
+	"World.loadRoom": {
+	  "prefix": "World:loadRoom",
+	  "body": "World:loadRoom(room)",
+	  "description": ""
+	},
+	"World.loopSound": {
+	  "prefix": "World:loopSound",
+	  "body": "World:loopSound(soundName, volume, pitch, pan)",
+	  "description": ""
+	},
+	"World.playAnimation": {
+	  "prefix": "World:playAnimation",
+	  "body": "World:playAnimation(animationFunction, parametersTable)",
+	  "description": "Plays an animation DURING THE TURN, the turn will not be over until the animation is complete"
+	},
+	"World.playAsyncAnimation": {
+	  "prefix": "World:playAsyncAnimation",
+	  "body": "World:playAsyncAnimation(animationFunction, parametersTable)",
+	  "description": "Plays an animation outside the turn, animation will run until it is over or until you leave the room"
+	},
+	"World.playSong": {
+	  "prefix": "World:playSong",
+	  "body": "World:playSong(trackName, loop)",
+	  "description": ""
+	},
+	"World.playSound": {
+	  "prefix": "World:playSound",
+	  "body": "World:playSound(soundName, volume, pitch, pan)",
+	  "description": ""
+	},
+	"World.raiseEvent": {
+	  "prefix": "World:raiseEvent",
+	  "body": "World:raiseEvent(eventName, parameters)",
+	  "description": ""
+	},
+	"World.raiseEventAt": {
+	  "prefix": "World:raiseEventAt",
+	  "body": "World:raiseEventAt(gridPosition, eventName, parameters)",
+	  "description": ""
+	},
+	"World.resetRoom": {
+	  "prefix": "World:resetRoom",
+	  "body": "World:resetRoom()",
+	  "description": ""
+	},
+	"World.setTileAt": {
+	  "prefix": "World:setTileAt",
+	  "body": "World:setTileAt(gridPosition, tileTemplateName)",
+	  "description": ""
+	},
+	"World.showBespokeDialogue": {
+	  "prefix": "World:showBespokeDialogue",
+	  "body": "World:showBespokeDialogue(settings)",
+	  "description": "Shows the Dialogue Box with custom data."
+	},
+	"World.showSceneDialogue": {
+	  "prefix": "World:showSceneDialogue",
+	  "body": "World:showSceneDialogue(sceneName)",
+	  "description": "Shows Dialog Box and runs a scene. If the scene is not found this will display an error message in the Dialogue\r\n                Box."
+	},
+	"World.spawnEntity": {
+	  "prefix": "World:spawnEntity",
+	  "body": "World:spawnEntity(gridPosition, direction, entityTemplateName)",
+	  "description": ""
+	},
+	"World.spawnObject": {
+	  "prefix": "World:spawnObject",
+	  "body": "World:spawnObject(gridPosition)",
+	  "description": "Spawn an animated object that can be controlled and tweened."
+	},
+	"World.stopSong": {
+	  "prefix": "World:stopSong",
+	  "body": "World:stopSong()",
+	  "description": ""
+	},
+	"World.update": {
+	  "prefix": "World:update",
+	  "body": "World:update()",
+	  "description": ""
+	},
+	"World.whenTurnIsOver": {
+	  "prefix": "World:whenTurnIsOver",
+	  "body": "World:whenTurnIsOver(luaFunction)",
+	  "description": ""
+	},
+	"World.camera": {
+	  "prefix": "World.camera",
+	  "body": "World.camera",
+	  "description": "The game camera"
+	},
+	"World.levelState": {
+	  "prefix": "World.levelState",
+	  "body": "World.levelState",
+	  "description": "Data that will be reset when a new level is loaded"
+	},
+	"World.roomState": {
+	  "prefix": "World.roomState",
+	  "body": "World.roomState",
+	  "description": "Data that will be reset when a new room is loaded"
+	},
+	"World.state": {
+	  "prefix": "World.state",
+	  "body": "World.state",
+	  "description": "Data that stays persistent through the whole \"run\" (even across levels)"
+	},
+	"World.turnState": {
+	  "prefix": "World.turnState",
+	  "body": "World.turnState",
+	  "description": "Data that will be reset when a new \"turn\" starts"
+	},
+	"WorldPosition.absolute": {
+	  "prefix": "position:absolute",
+	  "body": "position:absolute()",
+	  "description": ""
+	},
+	"WorldPosition.clone": {
+	  "prefix": "position:clone",
+	  "body": "position:clone()",
+	  "description": ""
+	},
+	"WorldPosition.getAxis": {
+	  "prefix": "position:getAxis",
+	  "body": "position:getAxis(luaDirection)",
+	  "description": ""
+	},
+	"WorldPosition.maxXY": {
+	  "prefix": "position:maxXY",
+	  "body": "position:maxXY()",
+	  "description": ""
+	},
+	"WorldPosition.x": {
+	  "prefix": "position.x",
+	  "body": "position.x",
+	  "description": ""
+	},
+	"WorldPosition.y": {
+	  "prefix": "position.y",
+	  "body": "position.y",
+	  "description": ""
+	},
+	"WritableState.addOtherState": {
+	  "prefix": "state:addOtherState",
+	  "body": "state:addOtherState(state)",
+	  "description": "Copies another objects State into this object. Any matching keys will be overwritten."
+	},
+	"WritableState.addTable": {
+	  "prefix": "state:addTable",
+	  "body": "state:addTable(table)",
+	  "description": "Copies a table into the state. Any key defined in the table will be used to define in the State."
+	},
+	"WritableState.clear": {
+	  "prefix": "state:clear",
+	  "body": "state:clear(key)",
+	  "description": "Deletes entry in the table."
+	},
+	"WritableState.get": {
+	  "prefix": "state:get",
+	  "body": "state:get(key)",
+	  "description": "Gets the key within the table. Returns nil if it's not found.\r\n                You can also use the [] syntax similar to a table."
+	},
+	"WritableState.has": {
+	  "prefix": "state:has",
+	  "body": "state:has(key)",
+	  "description": "Returns true if the key exists in the table"
+	},
+	"WritableState.set": {
+	  "prefix": "state:set",
+	  "body": "state:set(key, value)",
+	  "description": "Sets an entry within the table. You can also use the [] syntax."
+	}
+  }
+  

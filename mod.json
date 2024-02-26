@@ -4,7 +4,7 @@
     "soko_version": "0.0.1",
     "mod_version": "0.0.1",
     "default_tile": "floor",
-    "tile_size": 64,
+    "tile_size": 128,
     "title_screen_level": "title",
     "menu_selected_color": "",
     "campaign": {
@@ -12,17 +12,153 @@
         "name": "",
         "save_name": ""
     },
-    "trait_enums": [],
+    "trait_enums": [
+        {
+            "name": "Pushability",
+            "supported_values": [
+                {
+                    "name": "Immovable",
+                    "value": 0
+                },
+                {
+                    "name": "EasyToPush",
+                    "value": 10
+                },
+                {
+                    "name": "HardToPush",
+                    "value": 20
+                }
+            ]
+        },
+        {
+            "name": "Fillability",
+            "supported_values": [
+                {
+                    "name": "None",
+                    "value": 0
+                },
+                {
+                    "name": "FillsWater",
+                    "value": 10
+                }
+            ]
+        },
+        {
+            "name": "Strength",
+            "supported_values": [
+                {
+                    "name": "None",
+                    "value": 0
+                },
+                {
+                    "name": "CanDoEasy",
+                    "value": 10
+                },
+                {
+                    "name": "CanDoHard",
+                    "value": 20
+                }
+            ]
+        },
+        {
+            "name": "Phase",
+            "supported_values": [
+                {
+                    "name": "Immaterial",
+                    "value": 0
+                },
+                {
+                    "name": "Solid",
+                    "value": 10
+                },
+                {
+                    "name": "Liquid",
+                    "value": 20
+                }
+            ]
+        },
+        {
+            "name": "Swapability",
+            "supported_values": [
+                {
+                    "name": "SwapAgnostic",
+                    "value": 0
+                },
+                {
+                    "name": "CanSwap",
+                    "value": 10
+                },
+                {
+                    "name": "CancelSwap",
+                    "value": 20
+                }
+            ]
+        },
+        {
+            "name": "Height",
+            "supported_values": [
+                {
+                    "name": "Ground",
+                    "value": 0
+                },
+                {
+                    "name": "Body",
+                    "value": 10
+                },
+                {
+                    "name": "Flying",
+                    "value": 20
+                }
+            ]
+        }
+    ],
     "dialogue": "",
-    "color_aliases": [],
-    "swap_color": "FFFFFF",
+    "color_aliases": [
+        {
+            "alias": "floor",
+            "color": "171219"
+        },
+        {
+            "alias": "wall",
+            "color": "225560"
+        },
+        {
+            "alias": "swap",
+            "color": "EDF060"
+        },
+        {
+            "alias": "player",
+            "color": "F0803C"
+        },
+        {
+            "alias": "floor_alt",
+            "color": "5D2A42"
+        },
+        {
+            "alias": "white",
+            "color": "cccccc"
+        },
+        {
+            "alias": "water",
+            "color": "96ACB7"
+        },
+        {
+            "alias": "blue",
+            "color": "0496FF"
+        },
+        {
+            "alias": "red",
+            "color": "8F2D56"
+        }
+    ],
+    "swap_color": "FF00FF",
     "room_size_rule": {
         "type": "width",
-        "size": 12,
+        "size": 10,
         "aspect_ratio": "1:1"
     },
     "prop_layer_rules": {
-        "default_layer": 0,
+        "default_layer": 1,
         "rules": []
     },
     "layers": [
@@ -32,6 +168,10 @@
         },
         {
             "name": "Middle",
+            "shader": null
+        },
+        {
+            "name": "HighMiddle",
             "shader": null
         },
         {
@@ -47,7 +187,7 @@
         "color"
     ],
     "screen_size": {
-        "width": 800,
-        "height": 600
+        "width": 1920,
+        "height": 1080
     }
 }

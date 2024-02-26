@@ -1,0 +1,10 @@
+{
+    "level_overrides": [
+        {
+            "key": "player",
+            "value": "player"
+        }
+    ],
+    "icon": "player",
+    "sort": 1
+}

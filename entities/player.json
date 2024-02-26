@@ -1,0 +1,67 @@
+{
+    "traits": [
+        {
+            "name": "Phase",
+            "value": 10
+        },
+        {
+            "name": "Height",
+            "value": 10
+        },
+        {
+            "name": "Strength",
+            "value": 20
+        }
+    ],
+    "hide_from_editor": true,
+    "config_variables": [
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "renderer",
+                "value": "SingleFrame",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "sheet",
+                "value": "sheet",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "frame",
+                "value": "4",
+                "type": 1
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "layer",
+                "value": "4",
+                "type": 1
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "tint",
+                "value": "player",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "special_entity",
+                "value": "player",
+                "type": 1
+            }
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "traits": [
+        {
+            "name": "Phase",
+            "value": 10
+        }
+    ],
+    "config_variables": [
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "renderer",
+                "value": "SingleFrame",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "behavior",
+                "value": "brittle_floor",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "sheet",
+                "value": "sheet",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "frame",
+                "value": "17",
+                "type": 1
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "tint",
+                "value": "water",
+                "type": 0
+            }
+        }
+    ]
+}

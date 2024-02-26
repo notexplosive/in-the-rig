@@ -1,0 +1,59 @@
+{
+    "traits": [
+        {
+            "name": "Phase",
+            "value": 10
+        },
+        {
+            "name": "Height",
+            "value": 10
+        },
+        {
+            "name": "Pushability",
+            "value": 10
+        },
+        {
+            "name": "Strength",
+            "value": 10
+        },
+        {
+            "name": "Swapability",
+            "value": 10
+        }
+    ],
+    "hide_from_editor": false,
+    "config_variables": [
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "renderer",
+                "value": "SingleFrame",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "sheet",
+                "value": "sheet",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "frame",
+                "value": "15",
+                "type": 1
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "tint",
+                "value": "ff00ff",
+                "type": 0
+            }
+        }
+    ]
+}

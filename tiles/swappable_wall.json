@@ -3,10 +3,17 @@
         {
             "name": "Phase",
             "value": 10
+        },
+        {
+            "name": "Height",
+            "value": 10
+        },
+        {
+            "name": "Swapability",
+            "value": 10
         }
     ],
-    // floor is hidden
-    "hide_from_editor": true,
+    "hide_from_editor": false,
     "config_variables": [
         {
             "copy_to_instance": false,
@@ -20,7 +27,7 @@
             "copy_to_instance": false,
             "data": {
                 "key": "color",
-                "value": "floor",
+                "value": "swap",
                 "type": 0
             }
         }

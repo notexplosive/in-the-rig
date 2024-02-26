@@ -1,0 +1,64 @@
+{
+    "traits": [
+        {
+            "name": "Phase",
+            "value": 20
+        },
+        {
+            "name": "Height",
+            "value": 0
+        }
+    ],
+    "hide_from_editor": false,
+    "config_variables": [
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "renderer",
+                "value": "SolidColor",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "color",
+                "value": "water",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "behavior",
+                "value": "water",
+                "type": 0
+            }
+        },
+        // to be copied to prop
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "sheet",
+                "value": "sheet",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "tint",
+                "value": "water",
+                "type": 0
+            }
+        },
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "frame",
+                "value": "16",
+                "type": 1
+            }
+        }
+    ]
+}
