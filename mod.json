@@ -12,6 +12,14 @@
             {
                 "level": "main",
                 "name": "Intro"
+            },
+            {
+                "level": "level_1",
+                "name": "The Rig"
+            },
+            {
+                "level": "end",
+                "name": "The End"
             }
         ],
         "name": "In The Rig",
