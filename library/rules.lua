@@ -1,8 +1,23 @@
 local rules = {}
 
+function rules.hasCollectedAllFolders()
+    local t = World.levelState["folders"]
+    for i, key in ipairs(Soko:keysFromTable(t)) do
+        if not t[key] then
+            return false
+        end
+    end
+    return true
+end
+
 function rules.isSamePhase(gridling, mover)
     local phase = gridling:getTrait("Phase")
     return phase == mover:getTrait("Phase") or (mover == PLAYER and phase == 15)
+end
+
+function rules.isLeverFlipped(color)
+    World.roomState["levers"] = World.roomState["levers"] or {}
+    return World.roomState["levers"][color] == true
 end
 
 function rules.isCorporeal(entity)

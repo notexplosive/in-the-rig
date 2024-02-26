@@ -3,6 +3,10 @@
         {
             "name": "Phase",
             "value": 10
+        },
+        {
+            "name": "Height",
+            "value": 10
         }
     ],
     "hide_from_editor": false,
@@ -27,7 +31,7 @@
             "copy_to_instance": false,
             "data": {
                 "key": "frame",
-                "value": "22",
+                "value": "18",
                 "type": 1
             }
         },
@@ -35,7 +39,7 @@
             "copy_to_instance": false,
             "data": {
                 "key": "tag",
-                "value": "button",
+                "value": "lever",
                 "type": 0
             }
         },
@@ -47,19 +51,10 @@
             }
         },
         {
-            "copy_to_instance": false,
             "data": {
                 "key": "behavior",
-                "value": "button",
+                "value": "lever",
                 "type": 0
-            }
-        },
-        {
-            "copy_to_instance": false,
-            "data": {
-                "key": "layer",
-                "value": "1",
-                "type": 1
             }
         }
     ]

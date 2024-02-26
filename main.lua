@@ -1,11 +1,38 @@
 local rules = require("library/rules")
 local player = require("library/player")
 local exports = {}
--- !! note: These generated functions may not have the correct parameters !!
--- For example, onInput() should be onInput(input), but the generator doesn't support that yet
 
+function MAGIC(gridPosition)
+    return gridPosition.x .. "," .. gridPosition.y
+end
 
 function exports.onLoadLevel()
+    if World.levelState["no_player"] then
+        return
+    end
+
+    if not World.levelState:has("player") then
+        World.levelState["player"] = "player"
+    end
+
+    if not World.levelState:has("force_spawn_position") then
+        World.levelState["force_spawn_position"] = Soko.gridPosition(0, 0)
+
+        for i, entity in ipairs(World:allEntities()) do
+            if entity:templateName() == "start_point" then
+                World.levelState["force_spawn_position"] = entity.gridPosition
+                World.levelState["player_direction"] = entity.facingDirection
+            end
+        end
+    end
+
+    World.levelState["folders"] = {}
+    for i, entity in ipairs(World:allEntities()) do
+        if entity.state["behavior"] == "folder" then
+            World.levelState["folders"][MAGIC(entity.gridPosition)] = false
+        end
+    end
+
     player.spawn()
 end
 
@@ -27,12 +54,19 @@ function exports.onEntityDestroyed(entity)
 end
 
 function exports.onEnter()
+    for i, entity in ipairs(World:allEntities()) do
+        if entity.state["behavior"] == "folder" and World.levelState["folders"][MAGIC(entity.gridPosition)] then
+            entity:destroy()
+        end
+    end
+
     World:raiseEvent("onEnter", {})
 end
 
 function exports.onTurn()
     local availableSignals = {}
     local fulfilledSignals = {}
+
 
     World.levelState["player_direction"] = PLAYER.facingDirection
     for i, entity in ipairs(World:allEntitiesInRoom()) do
@@ -43,11 +77,19 @@ function exports.onTurn()
                 fulfilledSignals[entity.state["tint"]] = fulfilledSignals[entity.state["tint"]] + 1
             end
         end
+
+        if entity.state["tag"] == "lever" then
+            availableSignals[entity.state["tint"]] = (availableSignals[entity.state["tint"]] or 0) + 1
+        end
     end
 
     local signalFlagTable = {}
     for i, key in ipairs(Soko:keysFromTable(availableSignals)) do
         if availableSignals[key] > 0 and availableSignals[key] == fulfilledSignals[key] then
+            signalFlagTable[key] = true
+        end
+
+        if rules.isLeverFlipped(key) then
             signalFlagTable[key] = true
         end
     end
@@ -63,10 +105,11 @@ function exports.onLeave()
 end
 
 function exports.onStart()
-    World.camera:hideVignetteInstant()
+    --World.camera:hideVignetteInstant()
 end
 
-function exports.onUpdate()
+function exports.onUpdate(dt)
+    World:raiseEvent("onUpdate", { dt = dt })
 end
 
 function exports.onMove(move)
@@ -113,7 +156,12 @@ function exports.onMove(move)
         end
     end
 
+    if not move:isAllowed() then
+        World:raiseEventAt(destination, "onBump", { move = move })
+    end
+
     World:raiseEventAt(source, "onStepOff", { move = move })
+    World:raiseEventAt(destination, "onStepOn", { move = move })
 end
 
 return exports

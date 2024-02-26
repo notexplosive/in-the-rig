@@ -1,0 +1,15 @@
+{
+    "traits": [],
+    "hide_from_editor": false,
+    "is_directional": true,
+    "config_variables": [
+        {
+            "copy_to_instance": false,
+            "data": {
+                "key": "label",
+                "value": "START",
+                "type": 0
+            }
+        }
+    ]
+}

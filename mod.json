@@ -8,9 +8,14 @@
     "title_screen_level": "title",
     "menu_selected_color": "",
     "campaign": {
-        "chapters": [],
-        "name": "",
-        "save_name": ""
+        "chapters": [
+            {
+                "level": "main",
+                "name": "Intro"
+            }
+        ],
+        "name": "In The Rig",
+        "save_name": "made"
     },
     "trait_enums": [
         {
@@ -157,6 +162,14 @@
         {
             "alias": "red",
             "color": "8F2D56"
+        },
+        {
+            "alias": "exit",
+            "color": "D972FF"
+        },
+        {
+            "alias": "folder",
+            "color": "EAAC8B"
         }
     ],
     "swap_color": "FF00FF",

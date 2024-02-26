@@ -124,9 +124,9 @@ end
 function player.spawn()
     local playerSpawnPosition = World.levelState["force_spawn_position"]
     local playerEntity = World.levelState["player"]
-    local playerDirection = World.levelState["player_direction"]
+    local playerDirection = World.levelState["player_direction"] or Soko.DIRECTION.DOWN
     if playerEntity ~= nil then
-        PLAYER = World:spawnEntity(playerSpawnPosition, Soko.DIRECTION.DOWN, playerEntity)
+        PLAYER = World:spawnEntity(playerSpawnPosition, playerDirection, playerEntity)
         local newRoom = World:getRoomAtGridPosition(playerSpawnPosition)
         World:loadRoom(newRoom)
         World.camera:snapToRoom(newRoom)
@@ -208,6 +208,10 @@ function player.handleInput(input)
             end
 
             World:playAnimation(fireSwapGun, { thingToSwap = thingToSwap, hitPosition = raycastResult })
+        else
+            -- missed
+            World:playAnimation(fireSwapGun,
+                { thingToSwap = nil, hitPosition = PLAYER.gridPosition + PLAYER.facingDirection:toGridPosition() * 10 })
         end
     end
 end
