@@ -26,7 +26,7 @@ function exports.onEnter()
 end
 
 function exports.onTurn()
-
+    World.levelState["player_direction"] = PLAYER.facingDirection
 end
 
 function exports.onLoadCheckpoint()
@@ -62,7 +62,7 @@ function exports.onMove(move)
     -- check for solid ground
     local hasValidGround = false
     for i, gridling in ipairs(World:getGridlingsAt(destination)) do
-        if gridling:getTrait("Height") < moverHeight and gridling:getTrait("Phase") == moverPhase then
+        if gridling:getTrait("Height") < moverHeight and rules.isSamePhase(gridling, mover) then
             hasValidGround = true
         end
     end
@@ -73,7 +73,7 @@ function exports.onMove(move)
 
     -- check for blockers / pushables / etc
     for i, gridling in ipairs(World:getGridlingsAt(destination)) do
-        if gridling:getTrait("Phase") == moverPhase and gridling:getTrait("Height") == moverHeight then
+        if rules.isSamePhase(gridling, mover) and gridling:getTrait("Height") == moverHeight then
             local pushable = rules.getPushability(gridling)
             if (pushable == "EASY" and canDoEasy) or (pushable == "HARD" and canDoHard) then
                 local newMove = gridling:asEntity():generateDirectionalMove(move.direction)

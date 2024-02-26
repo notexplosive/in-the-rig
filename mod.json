@@ -72,6 +72,10 @@
                     "value": 10
                 },
                 {
+                    "name": "Forcefield",
+                    "value": 15
+                },
+                {
                     "name": "Liquid",
                     "value": 20
                 }
@@ -125,6 +129,10 @@
         {
             "alias": "swap",
             "color": "EDF060"
+        },
+        {
+            "alias": "swap_dark",
+            "color": "88A360"
         },
         {
             "alias": "player",

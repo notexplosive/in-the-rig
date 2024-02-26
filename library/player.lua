@@ -1,5 +1,26 @@
+local util = require("library.util")
 local raycast = require("library/raycast")
 local player = {}
+
+local function flickerColorAnimation(tween, params)
+    for i = 1, 2 do
+        tween:callback(function()
+            params.player.state["tint"] = "swap"
+            params.object.state["color"] = "player"
+            params.object.state["tint"] = "player"
+        end)
+
+        tween:wait(0.05)
+
+        tween:callback(function()
+            params.player.state["tint"] = "player"
+            params.object.state["color"] = "swap"
+            params.object.state["tint"] = "swap"
+        end)
+
+        tween:wait(0.05)
+    end
+end
 
 local function checkRoomTransition(startPosition, newPosition)
     local oldRoom = World:getRoomAtGridPosition(startPosition)
@@ -12,18 +33,10 @@ local function checkRoomTransition(startPosition, newPosition)
         World.camera:snapToRoom(newRoom)
         player.spawn()
         PLAYER.facingDirection = direction
-
-
-        -- destroy any entities that directly contradict the player
-        for i, entity in ipairs(World:getEntitiesAt(newPosition)) do
-            if entity ~= PLAYER and entity:checkTrait("Phase", "Solid") and entity:checkTrait("Height", "Body") then
-                entity:destroy()
-            end
-        end
     end
 end
 
-local function swapAnimation(tween, params)
+local function postSwapBobAnimation(tween, params)
     local entity = params.entity
 
     tween:interpolate(
@@ -46,8 +59,11 @@ local function finishSwap(tween, params)
         function()
             if thingToSwap:isEntity() then
                 thingToSwap.gridPosition = myPosition
-                World:playAsyncAnimation(swapAnimation,
+                World:playAsyncAnimation(postSwapBobAnimation,
                     { entity = thingToSwap, direction = PLAYER.facingDirection:next():next() })
+
+                World:playAsyncAnimation(flickerColorAnimation,
+                    { object = thingToSwap, player = PLAYER })
             else
                 local oldTile = World:getTileAt(myPosition):templateName()
                 World:setTileAt(myPosition, thingToSwap:templateName())
@@ -58,7 +74,7 @@ local function finishSwap(tween, params)
 
             tween:dynamic(function()
                 checkRoomTransition(myPosition, targetPosition)
-                swapAnimation(tween, { entity = PLAYER, direction = PLAYER.facingDirection })
+                postSwapBobAnimation(tween, { entity = PLAYER, direction = PLAYER.facingDirection })
             end)
         end
     )
@@ -108,6 +124,7 @@ end
 function player.spawn()
     local playerSpawnPosition = World.levelState["force_spawn_position"]
     local playerEntity = World.levelState["player"]
+    local playerDirection = World.levelState["player_direction"]
     if playerEntity ~= nil then
         PLAYER = World:spawnEntity(playerSpawnPosition, Soko.DIRECTION.DOWN, playerEntity)
         local newRoom = World:getRoomAtGridPosition(playerSpawnPosition)
@@ -127,6 +144,18 @@ function player.spawn()
         end
 
         PLAYER.state["facing_arrow"] = arrow
+
+
+        -- destroy any entities are swappable here (guessing we probably swapped into this room)
+        if World:getTileAt(playerSpawnPosition):checkTrait("Swapability", "CanSwap") then
+            World.setTileAt(playerSpawnPosition, "floor")
+        end
+
+        for i, entity in ipairs(World:getEntitiesAt(playerSpawnPosition)) do
+            if entity:checkTrait("Swapability", "CanSwap") then
+                entity:destroy()
+            end
+        end
     end
 end
 
@@ -154,15 +183,28 @@ function player.handleInput(input)
             return false
         end
 
-        local raycastResult = raycast.cast(PLAYER.gridPosition, PLAYER.facingDirection, shouldStopCast)
+        local raycastResult = raycast.cast(PLAYER.gridPosition + PLAYER.facingDirection:toGridPosition(),
+            PLAYER.facingDirection, shouldStopCast)
         if raycastResult then
             local thingToSwap = nil
 
+            local candidates = Soko:list()
             for i, gridling in ipairs(World:getGridlingsAt(raycastResult)) do
                 if gridling:checkTrait("Swapability", "CanSwap") then
-                    thingToSwap = gridling
-                    break
+                    candidates:add(gridling)
                 end
+            end
+
+            local numberOfCandidates = #candidates
+
+            if numberOfCandidates == 1 then
+                thingToSwap = candidates[1]
+            end
+            if numberOfCandidates > 1 then
+                candidates:sort(function(a, b)
+                    return util.getLayer(b) - util.getLayer(a)
+                end)
+                thingToSwap = candidates[1]
             end
 
             World:playAnimation(fireSwapGun, { thingToSwap = thingToSwap, hitPosition = raycastResult })

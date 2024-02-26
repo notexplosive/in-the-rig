@@ -6,6 +6,10 @@
         },
         {
             "name": "Height",
+            "value": 0
+        },
+        {
+            "name": "Swapability",
             "value": 10
         }
     ],
@@ -31,7 +35,7 @@
             "copy_to_instance": false,
             "data": {
                 "key": "tint",
-                "value": "wall",
+                "value": "swap_dark",
                 "type": 0
             }
         },
@@ -39,7 +43,7 @@
             "copy_to_instance": false,
             "data": {
                 "key": "frame",
-                "value": "9",
+                "value": "11",
                 "type": 1
             }
         }

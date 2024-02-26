@@ -2,7 +2,7 @@
     "traits": [
         {
             "name": "Phase",
-            "value": 10
+            "value": 15
         },
         {
             "name": "Height",
@@ -39,7 +39,7 @@
             "copy_to_instance": false,
             "data": {
                 "key": "frame",
-                "value": "9",
+                "value": "23",
                 "type": 1
             }
         }
