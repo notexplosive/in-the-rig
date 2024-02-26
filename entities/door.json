@@ -9,16 +9,8 @@
             "value": 10
         },
         {
-            "name": "Pushability",
-            "value": 20
-        },
-        {
             "name": "Swapability",
-            "value": 10
-        },
-        {
-            "name": "Fillability",
-            "value": 10
+            "value": 20
         }
     ],
     "hide_from_editor": false,
@@ -51,15 +43,21 @@
             "copy_to_instance": false,
             "data": {
                 "key": "frame",
-                "value": "8",
+                "value": "19",
                 "type": 1
             }
         },
         {
-            "copy_to_instance": false,
             "data": {
                 "key": "tint",
-                "value": "swap",
+                "value": "red",
+                "type": 0
+            }
+        },
+        {
+            "data": {
+                "key": "behavior",
+                "value": "door",
                 "type": 0
             }
         }

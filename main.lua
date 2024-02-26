@@ -11,14 +11,19 @@ end
 
 function exports.onInput(input)
     player.handleInput(input)
+    World:update()
 end
 
 function exports.onRoomStateChanged()
 
 end
 
-function exports.onEntityDestroyed()
+function exports.onEntityDestroyed(entity)
+    if entity == PLAYER then
+        World:resetRoom()
+    end
 
+    -- todo: poof vfx
 end
 
 function exports.onEnter()
@@ -26,7 +31,28 @@ function exports.onEnter()
 end
 
 function exports.onTurn()
+    local availableSignals = {}
+    local fulfilledSignals = {}
+
     World.levelState["player_direction"] = PLAYER.facingDirection
+    for i, entity in ipairs(World:allEntitiesInRoom()) do
+        if entity.state["tag"] == "button" then
+            availableSignals[entity.state["tint"]] = (availableSignals[entity.state["tint"]] or 0) + 1
+            fulfilledSignals[entity.state["tint"]] = fulfilledSignals[entity.state["tint"]] or 0
+            if rules.isPressedAt(entity.gridPosition) then
+                fulfilledSignals[entity.state["tint"]] = fulfilledSignals[entity.state["tint"]] + 1
+            end
+        end
+    end
+
+    local signalFlagTable = {}
+    for i, key in ipairs(Soko:keysFromTable(availableSignals)) do
+        if availableSignals[key] > 0 and availableSignals[key] == fulfilledSignals[key] then
+            signalFlagTable[key] = true
+        end
+    end
+
+    World:raiseEvent("onSignal", { signalFlagTable = signalFlagTable })
 end
 
 function exports.onLoadCheckpoint()
@@ -41,7 +67,6 @@ function exports.onStart()
 end
 
 function exports.onUpdate()
-
 end
 
 function exports.onMove(move)

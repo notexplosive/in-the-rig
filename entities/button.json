@@ -3,22 +3,6 @@
         {
             "name": "Phase",
             "value": 10
-        },
-        {
-            "name": "Height",
-            "value": 10
-        },
-        {
-            "name": "Pushability",
-            "value": 20
-        },
-        {
-            "name": "Swapability",
-            "value": 10
-        },
-        {
-            "name": "Fillability",
-            "value": 10
         }
     ],
     "hide_from_editor": false,
@@ -42,24 +26,23 @@
         {
             "copy_to_instance": false,
             "data": {
-                "key": "layer",
-                "value": "2",
+                "key": "frame",
+                "value": "22",
                 "type": 1
             }
         },
         {
             "copy_to_instance": false,
             "data": {
-                "key": "frame",
-                "value": "8",
-                "type": 1
+                "key": "tag",
+                "value": "button",
+                "type": 0
             }
         },
         {
-            "copy_to_instance": false,
             "data": {
                 "key": "tint",
-                "value": "swap",
+                "value": "red",
                 "type": 0
             }
         }

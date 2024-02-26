@@ -5,6 +5,18 @@ function rules.isSamePhase(gridling, mover)
     return phase == mover:getTrait("Phase") or (mover == PLAYER and phase == 15)
 end
 
+function rules.isCorporeal(entity)
+    return entity:checkTrait("Phase", "Solid") and entity:checkTrait("Height", "Body")
+end
+
+function rules.isPressedAt(gridPosition)
+    for i, entity in ipairs(World:getEntitiesAt(gridPosition)) do
+        if entity:checkTrait("Phase", "Solid") and entity:checkTrait("Height", "Body") then
+            return true
+        end
+    end
+end
+
 function rules.getPushability(gridling)
     local entity = gridling:asEntity()
     if entity ~= nil then
