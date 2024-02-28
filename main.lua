@@ -8,6 +8,7 @@ end
 
 function exports.onLoadLevel()
     if World.levelState["no_player"] then
+        World:loadRoom(World:getRoomAtGridPosition(Soko:gridPosition(0, 0)))
         return
     end
 
@@ -37,6 +38,10 @@ function exports.onLoadLevel()
 end
 
 function exports.onInput(input)
+    if PLAYER == nil then
+        return nil
+    end
+
     player.handleInput(input)
     World:update()
 end
@@ -64,9 +69,12 @@ function exports.onEnter()
 end
 
 function exports.onTurn()
+    if PLAYER == nil then
+        return nil
+    end
+
     local availableSignals = {}
     local fulfilledSignals = {}
-
 
     World.levelState["player_direction"] = PLAYER.facingDirection
     for i, entity in ipairs(World:allEntitiesInRoom()) do
